@@ -8,6 +8,7 @@
         "php": "^7.3|^8.0",
         "google/cloud-firestore": "^1.19",
         "grpc/grpc": "^1.34",
+        "guzzlehttp/guzzle": "^7.2",
         "jenssegers/mongodb": "^3.8",
         "kreait/laravel-firebase": "^3.0",
         "laravel/lumen-framework": "^8.0"

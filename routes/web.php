@@ -11,7 +11,7 @@
 | It is a breeze. Simply tell Lumen the URIs it should respond to
 | and give it the Closure to call when that URI is requested.
 |
-*/
+ */
 
 $router->get('/', function () use ($router) {
     return $router->app->version();
@@ -44,5 +44,10 @@ $router->group(['prefix' => 'api'], function () use ($router) {
         $router->post('/', 'PostController@storeFirestore');
         $router->put('/{id}', 'PostController@updateFirestore');
         $router->delete('/{id}', 'PostController@deleteFirestore');
+    });
+
+    // Filter
+    $router->group(['prefix' => 'bill-detail'], function () use ($router) {
+        $router->get('/', 'HomeController@index');
     });
 });
